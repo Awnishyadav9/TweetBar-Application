@@ -12,5 +12,5 @@ A web application built with Django, allowing users to create, read, update, and
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/username/tweet-bar.git
+   git clone https://github.com/Awnishyadav9/TweetBar-Application.git
    cd tweet-bar
