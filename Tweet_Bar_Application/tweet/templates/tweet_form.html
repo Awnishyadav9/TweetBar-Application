@@ -1,0 +1,17 @@
+{% extends "layout.html" %} {% block title %} Tweet Form {% endblock title %} 
+
+{% block content %}
+<h1 class="text-center text-3xl text-white font-bold mt-5">Edit Tweet</h1>
+
+<div class='flex items-center justify-center'>
+    <h2 class='text-gray-300 text-xl'>
+        {% if form.instance.pk %} Update Tweet {% else %} Create Tweet {% endif %}
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{form.as_p}}
+          <button type="submit" class='inline-flex items-center justify-center px-3 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 mt-5'>Tweet</button>
+          <a href="{% url 'TweetList' %}" class='inline-flex items-center justify-center px-3 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 mt-5'>Back To Home</a>
+        </form>
+      </h2>
+</div>
+{% endblock content %}
